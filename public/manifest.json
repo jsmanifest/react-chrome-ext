@@ -11,9 +11,9 @@
     {
       "matches": ["<all_urls>"],
       "js": [
-        "/static/js/2.2e3b5afd.chunk.js",
-        "/static/js/main.bf10c391.chunk.js",
-        "/static/js/runtime-main.0741577f.js"
+        "/static/js/2.chunk.js",
+        "/static/js/main.chunk.js",
+        "/static/js/runtime-main.js"
       ]
     }
   ],

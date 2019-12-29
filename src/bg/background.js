@@ -10,13 +10,11 @@ chrome.runtime.onInstalled.addListener(message => {
     "audio"
   ];
   // onClicking these in the UI will send to contextMenu handlers
-  chrome.contextMenus.create([
-    {
-      title: "Filter by duration",
-      id: "filter-by-duration",
-      contexts: [...contexts, "browser_action"]
-    }
-  ]);
+  chrome.contextMenus.create({
+    title: "Filter by duration",
+    id: "filter-by-duration",
+    contexts: [...contexts, "browser_action"]
+  });
 });
 
 function getActiveTab(callback) {
