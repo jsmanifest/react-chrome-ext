@@ -1,25 +1,21 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
+  "manifest_version": 2,
+  "version": "1.0.1",
+  "name": "React Chrome Extension",
+  "content_security_policy": "script-src 'self' 'sha256-xr+HqUtnq8KF3IBn+TQ37Vz0elxg11bPYmNJy5M/p38='; object-src 'self'",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "matches": ["<all_urls>"],
+      "js": [
+        "/static/js/2.2e3b5afd.chunk.js",
+        "/static/js/main.bf10c391.chunk.js",
+        "/static/js/runtime-main.0741577f.js"
+      ]
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "permissions": ["activeTab", "tabs", "contextMenus"]
 }
